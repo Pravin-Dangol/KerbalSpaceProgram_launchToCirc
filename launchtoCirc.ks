@@ -622,7 +622,7 @@ UNTIL launchComplete {
 	IF runMode = 4 {
 		SET throt TO 0.
 		SET runMode TO 4.5.
-		IF stageDeltaV > 0 { // dV alculator returns -1 if unable to calculate
+		IF stageDeltaV >= 0 { // dV alculator returns -1 if unable to calculate
 			IF (stageDeltaV < nodeDeltaV*0.5 AND nodeDeltaV > 200) OR stageDeltaV < 100 {
 				SET triggerStage TO True.
 				scrollPrint("T+"+ROUND(MET,1)+" Low fuel in stage, separating").
