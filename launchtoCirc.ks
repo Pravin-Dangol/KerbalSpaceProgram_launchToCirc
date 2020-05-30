@@ -112,7 +112,7 @@ SET CONFIG:IPU TO 500.
 SET maxLinesToPrint TO 24. // Max # of lines in scrolling list
 SET listLineStart TO 16. // First line for print scrolling list
 IF logVerboseData {
-	LOG 1 TO launchDataLog.csv. DELETE launchDataLog.csv.
+	LOG 1 TO launchDataLog.csv. DELETEPATH("launchDataLog.csv").
 	// Verbose data log header
 	LOG "M.E.T. [s], Sea Level Altitude [m], Radar Altitude [m], Latitude [deg], Longitude [deg], Surface Velocity [m/s], Orbital Velocity [m/s], Vertical Speed [m/s], Ground Speed [m/s], Apoapsis [m], Time to Apoapsis [s], Periapsis [m], Time to Periapsis [s], Inclination [deg], Mass [t], Max Thrust [kN], Current Thrust [kN], T.W.R., % Terminal Velocity, Trajectory Preferred Pitch [deg], Pitch Command [deg], Vessel Pitch [deg], Heading Command [deg], Vessel Heading [deg], dv Spent [m/s], Dynamic Pressure [kPa]" TO launchDataLog.csv.
 }.
